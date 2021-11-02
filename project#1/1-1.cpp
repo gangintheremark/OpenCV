@@ -5,6 +5,7 @@
 using namespace cv;
 using namespace std;
 
+// 이진영상 만들기
 void main() {
 	Mat image = imread("flower.png", IMREAD_GRAYSCALE);
 	Mat result = image.clone();
