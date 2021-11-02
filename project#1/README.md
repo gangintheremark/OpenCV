@@ -41,7 +41,7 @@ float index = 255 / (float)(highvalue - lowvalue);
 ### 4. 앤드인 탐색 기법
 
 > if (old pixel <= low) -> new pixel = 0 <br>
-> if (low <= old pixel && old pixel <= high) ->	기본 명암대비 스트레칭 공식 
+> if (low <= old pixel && old pixel <= high) ->	기본 명암대비 스트레칭 공식 <br>
 > if (high <= old pixel) -> new pixel = 255  <br>
 > - low : 입력 영상 내 가장 작은 값
 > - high : 입력 영상 내 가장 큰 값  
