@@ -40,12 +40,12 @@ float index = 255 / (float)(highvalue - lowvalue);
 
 ### 4. 앤드인 탐색 기법
 
-> if(old pixel <= low)
->   new pixel = 0
-> else if (low <= old pixel && old pixel <= high)
-> 	new pixel = (old pixel - low ) x 255 / (high - low)
-> else 
-> 	new pixel = 255
+> if(old pixel <= low) <br>
+>   new pixel = 0 <br>
+> else if (low <= old pixel && old pixel <= high) <br>
+> 	new pixel = (old pixel - low ) x 255 / (high - low)  <br>
+> else  <br>
+> 	new pixel = 255  <br>
 > - low : 입력 영상 내 가장 작은 값
 > - high : 입력 영상 내 가장 큰 값  
 
