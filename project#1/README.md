@@ -5,7 +5,7 @@ Thresholding 임계값 처리로 binary 이미지 만들기
 
 ```c++
 
-	threshold(image, result, 128, 255, THRESH_BINARY);
+threshold(image, result, 128, 255, THRESH_BINARY);
 
 ```
 임계값 128을 기준으로 이상이면 1, 이하면 0으로 처리한다.
@@ -34,13 +34,38 @@ result = 255 - result;
 > - high : 입력 영상 내 가장 큰 값   
 
 ```c++
-	float index = 255 / (float)(highvalue - lowvalue);
+float index = 255 / (float)(highvalue - lowvalue);
 
-		for (int i = 0; i < image.rows; i++) {
-			for (int j = 0; j < image.cols; j++) 
-				result.at<uchar>(i, j) = (uchar)(image.at<uchar>(i, j) - lowvalue) * index;	 
-		}	
+	for (int i = 0; i < image.rows; i++) {
+		for (int j = 0; j < image.cols; j++) 
+			result.at<uchar>(i, j) = (uchar)(image.at<uchar>(i, j) - lowvalue) * index;	 
+	}	
 ```
 
+### 4. 앤드인 탐색 기법
+
+> if(old pixel <= low)
+>   new pixel = 0
+> else if (low <= old pixel && old pixel <= high)
+> 	new pixel = (old pixel - low ) x 255 / (high - low)
+> else 
+> 	new pixel = 255
+> - low : 입력 영상 내 가장 작은 값
+> - high : 입력 영상 내 가장 큰 값  
+
+```c++
+for (int i = 0; i < image.rows; i++) {
+	for (int j = 0; j < image.cols; j++) {
+		if (lowvalue >= image.at<uchar>(i, j))
+			result.at<uchar>(i, j) = 0;
+
+		else if (lowvalue <= image.at<uchar>(i, j) && highvalue >= image.at<uchar>(i, j))
+			result.at<uchar>(i, j) = (uchar)(image.at<uchar>(i, j) - lowvalue) * index;
+
+		else if (highvalue <= image.at<uchar>(i, j))
+			result.at<uchar>(i, j) = 255;
+	}
+}
+```
 
 
