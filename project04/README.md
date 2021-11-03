@@ -3,11 +3,11 @@
 
 ![#1](https://user-images.githubusercontent.com/81904943/140025364-0b606ed0-6455-4e6e-b5d2-63237e751b56.PNG)
 
----
+----
 
 ### 2. RGB -> HIS
 
-![#2](https://user-images.githubusercontent.com/81904943/140025412-f56a0736-2dc6-4526-8ff6-3377ea4d4312.png)
+![2##](https://user-images.githubusercontent.com/81904943/140025959-b3dd6588-acf4-4853-a298-3b5e67ad4255.PNG)
 
 ----
 
