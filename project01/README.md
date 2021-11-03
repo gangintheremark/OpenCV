@@ -1,14 +1,16 @@
 ## [C++ OpenCV]
 ### 1. 이진영상 만들기
 
-Thresholding 임계값 처리로 binary 이미지 만들기
-
+Thresholding 임계값 처리로 binary 이미지 만들기 <br>
+임계값 128을 기준으로 이상이면 1, 이하면 0으로 처리한다.
 ```c++
 
 threshold(image, result, 128, 255, THRESH_BINARY);
 
 ```
-임계값 128을 기준으로 이상이면 1, 이하면 0으로 처리한다.
+
+![이진](https://user-images.githubusercontent.com/81904943/140021789-6f7732c0-67a7-4266-beb3-81eeb22947c0.PNG)
+
 
 ### 2. 반전영상 만들기 
 
@@ -20,6 +22,9 @@ result = image.clone();
 result = 255 - result;
 // ex. 화소값 0번은 255번으로, 1번은 254번으로 
 ```
+
+![반전](https://user-images.githubusercontent.com/81904943/140021856-a7f00907-9f31-499a-951c-379c7b3c0ac6.PNG)
+
 
 ### 3. 기본 명암 대비 스트레칭 기법 
 
