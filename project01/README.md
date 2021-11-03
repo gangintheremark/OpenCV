@@ -11,6 +11,7 @@ threshold(image, result, 128, 255, THRESH_BINARY);
 
 ![이진](https://user-images.githubusercontent.com/81904943/140021789-6f7732c0-67a7-4266-beb3-81eeb22947c0.PNG)
 
+----
 
 ### 2. 반전영상 만들기 
 
@@ -24,6 +25,8 @@ result = 255 - result;
 ```
 
 ![반전](https://user-images.githubusercontent.com/81904943/140021856-a7f00907-9f31-499a-951c-379c7b3c0ac6.PNG)
+
+----
 
 
 ### 3. 기본 명암 대비 스트레칭 기법 
@@ -42,6 +45,7 @@ float index = 255 / (float)(highvalue - lowvalue);
 			result.at<uchar>(i, j) = (uchar)(image.at<uchar>(i, j) - lowvalue) * index;	 
 	}	
 ```
+----
 
 ### 4. 앤드인 탐색 기법
 
