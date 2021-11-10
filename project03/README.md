@@ -1,6 +1,6 @@
 ## [C++ OpenCV]
 
-### 1. 유사연산자 기법 프로그램
+#### 1. 유사연산자 기법 프로그램
 
 ![3-1](https://user-images.githubusercontent.com/81904943/141056539-431d09fb-4dcf-46be-8962-8c35b70b77d0.PNG)
 
