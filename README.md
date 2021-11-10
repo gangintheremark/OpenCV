@@ -1,3 +1,3 @@
 ## C++ OpenCV
 
-`For class assignments`
+`For class assignments `
